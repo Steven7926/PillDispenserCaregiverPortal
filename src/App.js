@@ -31,11 +31,11 @@ function App() {
         var userInfo = '{"firstName":"'
             + firstname.value
             + '","lastName":"'
-            + lastname
+            + lastname.value
             + '","phoneNum":"'
             + phonenum.value
             + '","phoneCarrier":"'
-            + phonecarrier.value
+            + phonecarrier
             + '"}';
 
         try {
