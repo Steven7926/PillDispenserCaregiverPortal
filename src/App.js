@@ -68,6 +68,9 @@ function App() {
         <p>
                   Welcome to Magic Meds! Fill out the form below to be added to the Caregiver database!
         </p>
+        <p style={{fontSize: 'small'}}>
+                ***By adding yourself as a caregiver you are consenting to receive sms text messages***
+        </p>
         <form>
             <div>
                 <span style={{ marginRight: '10px' }}><FontAwesomeIcon icon={['fas', 'user']} size="sm" style={{ color: 'white' }} transform="down-4" /></span>
