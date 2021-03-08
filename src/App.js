@@ -3,7 +3,6 @@ import logo from './logo.png';
 import './App.css';
 import './fontawesome';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 var BASE_URL = 'https://magicmeds.herokuapp.com/';
@@ -15,15 +14,11 @@ function App() {
 
     const [signupMessage, setSignupMessage] = useState('');
 
-    const options = [
-        'At&t', 'Verizon', 'Tmobile', 'Sprint'
-    ];
-    const phonecarrier = options[0];
 
     const addCaregiver = async event => {
         event.preventDefault();
 
-        if (firstname.value === "" || lastname.value === "" || phonenum.value === "" || phonecarrier.value === "") {
+        if (firstname.value === "" || lastname.value === "" || phonenum.value === "") {
             setSignupMessage("Please fill in all of the blanks.");
             return;
         }
@@ -33,9 +28,7 @@ function App() {
             + '","lastName":"'
             + lastname.value
             + '","phoneNum":"'
-            + phonenum.value
-            + '","phoneCarrier":"'
-            + phonecarrier
+            + phonenum.value          
             + '"}';
 
         try {
@@ -81,11 +74,7 @@ function App() {
                 <br></br>
                 <span style={{ marginRight: '10px' }}><FontAwesomeIcon icon={['fas', 'hashtag']} size="sm" style={{ color: 'white' }} transform="down-4" /> </span>
                 <input id="phonein" className="inputslong" type="text" placeholder="Phone Number" ref={(c) => phonenum = c}></input>
-                <br></br>
-                <div style={{ marginRight: '10px', paddingTop: '10px'}}>
-                    <span style={{ marginRight: '10px', float: 'left' }}><FontAwesomeIcon icon={['fas', 'phone']} size="sm" style={{ color: 'white' }} transform="down-4" /></span>
-                    <Dropdown id="carrierin" className="dropdown" controlClassName='myControlClassName' options={options} value={phonenum} placeholder="Select an option" />
-                </div>
+                <br></br>                
                 <br></br>
             </div>
          </form>
