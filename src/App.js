@@ -74,8 +74,8 @@ function App() {
                 <br></br>
                 <span style={{ marginRight: '10px' }}><FontAwesomeIcon icon={['fas', 'hashtag']} size="sm" style={{ color: 'white' }} transform="down-4" /> </span>
                 <input id="phonein" className="inputslong" type="text" placeholder="Phone Number" ref={(c) => phonenum = c}></input>
+                <p style={{ fontSize: 'small' }}>As plain numbers please (Ex: 3524034106)</p>
                 <br></br>                
-                <br></br>
             </div>
          </form>
          <button className="button" onClick={addCaregiver}>
